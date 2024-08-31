@@ -13,13 +13,10 @@ function App() {
           <Navbar />
         </div>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
           <Route path="/upload" element={<Upload />}></Route>
-          <Route path = "/try" element={<Try/>}></Route>
+          <Route path = "/" element={<Try/>}></Route>
         </Routes>
-        <div className="fixed-bottom">
-          <Footer />
-        </div>
+        {/* <Footer/> */}
       </Router>
     </>
   )

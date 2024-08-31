@@ -23,11 +23,13 @@ const footerStyle = {
   position: 'fixed',
   width: '100%',
   bottom: '0',
+  zIndex:"5"
 };
 
 const footerContainerStyle = {
   maxWidth: '1000px',
-  margin: '0 auto',
+  margin: 'auto',
+  zIndex:"5",
   padding: '0 20px',
 };
 

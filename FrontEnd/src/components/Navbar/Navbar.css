@@ -8,6 +8,8 @@
     top: 0;
     left: 0;
     z-index: 10;
+    margin-top: 1vmax;
+    margin-bottom: 1vmax;;
     /* border-bottom: 2px solid white; */
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 0 20px; /* Adds padding for a better layout */
