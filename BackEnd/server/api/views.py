@@ -41,7 +41,7 @@ def makeImage(prediction):
     image = Image.fromarray(predicted_image_np)
 
     # Save the image
-    image.save('moon_2_pred_1.png')  # You can change the file format as needed
+    image.save('moon_2_pred_1.png')
     print("Image saved as 'predicted_image.png'")
     return image
 
@@ -116,7 +116,7 @@ class ProcessImageView(APIView):
 
         try:
             # Open the image using Pillow
-            image = Image.open(image_file).convert('RGB')
+            # image = Image.open(image_file).convert('RGB')
 
             # Convert the PIL image to a TensorFlow tensor
             loaded_model = tf.saved_model.load('zero_dce_model')
@@ -125,17 +125,17 @@ class ProcessImageView(APIView):
             test_image_path = 'Moon_Image_scaled.jpg'  # Replace with the actual path to your image
 
             # Preprocess the image and create a batch
-            test_image = load_data(test_image_path)
-            test_image = tf.expand_dims(test_image, axis=0)  # Expand dimensions to create a batch
+            # test_image = load_data(test_image_path)
+            test_image = tf.expand_dims(image_file, axis=0)  # Expand dimensions to create a batch
 
             # Use the model to make a prediction on the preprocessed image
             prediction = loaded_model(test_image, training=False)  # Explicitly set training=False if needed
 
-            image = makeImage(prediction=prediction)
+            image = makeImage(prediction)
             
 
             # Return the processed image as an HTTP response
-            return HttpResponse("worked", content="application/text")
+            return HttpResponse(image, content_type='image/jpeg')
 
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
