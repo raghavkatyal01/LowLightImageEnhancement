@@ -1,11 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
   return (
-    <div>
-      Hello this is Footer
-    </div>
-  )
+    <footer style={footerStyle}>
+      <div style={footerContainerStyle}>
+        <p>&copy; GeekPie. All rights reserved.</p>
+        <nav>
+          {/* <a href="/about" style={linkStyle}>About Us</a> */}
+          {/* <a href="/contact" style={linkStyle}>Contact</a> */}
+          {/* <a href="/privacy" style={linkStyle}>Privacy Policy</a> */}
+        </nav>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+const footerStyle = {
+  backgroundColor: '#000000',
+  color: '#fff',
+  padding: '10px 0',
+  textAlign: 'center',
+  position: 'fixed',
+  width: '100%',
+  bottom: '0',
+};
+
+const footerContainerStyle = {
+  maxWidth: '1000px',
+  margin: '0 auto',
+  padding: '0 20px',
+};
+
+const linkStyle = {
+  color: '#fff',
+  margin: '0 10px',
+  textDecoration: 'none',
+};
+
+export default Footer;
