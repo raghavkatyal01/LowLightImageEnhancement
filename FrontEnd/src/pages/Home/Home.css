@@ -15,7 +15,7 @@ body, html {
 
 .page1, .page2, .page3, .page4, .page5 {
     height: 100vh; /* Ensures each page takes the full viewport height */
-    width: 100vw; /* Ensures each page takes the full viewport width */
+    width: 100%; /* Ensures each page takes the full viewport width */
     display: flex;
     justify-content: center;
     align-items: center;
