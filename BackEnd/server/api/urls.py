@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import get_data
+from .views import ProcessImageView
 
 urlpatterns = [
-    path('data/', get_data),
+    path('predict/', ProcessImageView.as_view(), name='process_image'),
 ]
