@@ -24,13 +24,6 @@ body, html {
     scroll-snap-align: start; /* Aligns each page at the start on scroll */
 }
 
-/* Different background colors for each page for visual distinction */
-.page1 {
-    background-image: url('your-image-url.jpg'); /* Adds a background image for the landing page */
-    background-size: cover; /* Ensures the background image covers the entire page */
-    background-position: center; /* Centers the background image */
-}
-
 .page2 {
     background-color: #ff6f61;
 }
@@ -46,29 +39,5 @@ body, html {
 .page5 {
     background-color: #2f4f4f;
 }
-
-/* Optional styles for adding more visual interest */
-.page1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: transparent; /* Adds a semi-transparent overlay */
-    z-index: -1; /* Places it behind the content */
-}
-
-.page1 span {
-    position: relative;
-    z-index: 1;
-}
-
-/* Animation and hover effects */
-.page1:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
 
   
