@@ -4,15 +4,15 @@ import './Navbar.css'
 function Navbar() {
   return (
     <>
-      <div className="nav">
+      <div style={{marginTop:"2vmin"}} className="nav">
           <div className="navmain">
             <div className="left">
-              <span>GeekPie</span>
+              <span style={{marginLeft:"3vmin"}}>GeekPie</span>
             </div>
             <div className="right ">
               <a href="/upload">
                 <span>
-                  upload
+                  Upload
                 </span>
               </a>
             </div>
