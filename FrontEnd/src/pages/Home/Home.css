@@ -24,6 +24,27 @@ body, html {
     scroll-snap-align: start; /* Aligns each page at the start on scroll */
 }
 
+.page1 {
+    position: relative; /* Allows absolute positioning of the content within this div */
+}
+
+.page1-content {
+    position: absolute; /* Positioning over the globe */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for exact center */
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+    color: white; /* Ensures text is readable */
+    z-index: 1; /* Places text above the globe */
+    cursor:crosshair;
+}
+
 .page2 {
     background-color: #ff6f61;
 }
@@ -39,5 +60,3 @@ body, html {
 .page5 {
     background-color: #2f4f4f;
 }
-
-  

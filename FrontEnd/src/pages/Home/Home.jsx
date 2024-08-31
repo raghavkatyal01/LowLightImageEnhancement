@@ -9,11 +9,16 @@ function Home() {
     <>
       <div className="mainpage">
         <div className="page1">
-          <div style={{ width: "100%", height: "100%" }}>
+          <div style={{ width: "100vw", height: "100vh" }}>
             <Globe
               globeImageUrl={moonTexture}
               backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
             />
+          </div>
+          {/* Add text content here */}
+          <div className="page1-content">
+            <h1>Welcome to the Moon</h1>
+            <p>Explore the lunar surface in detail!</p>
           </div>
         </div>
 
