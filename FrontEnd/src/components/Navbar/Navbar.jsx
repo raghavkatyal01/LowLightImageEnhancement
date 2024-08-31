@@ -4,7 +4,7 @@ import './Navbar.css'
 function Navbar() {
   return (
     <>
-      <div style={{marginTop:"2vmin"}} className="nav">
+      <div className="nav fixed">
           <div className="navmain">
             <div className="left">
               <span style={{marginLeft:"3vmin"}}>GeekPie</span>
