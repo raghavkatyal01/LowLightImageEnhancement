@@ -1,0 +1,50 @@
+/* Navbar.css */
+
+.nav {
+    height: 6.5vh;
+    background-color: rgba(0, 0, 0, 0.093); /* Slightly transparent background for better visibility */
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* border-bottom: 2px solid white; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px; /* Adds padding for a better layout */
+}
+
+.navmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Ensures that the content spans the full height of the navbar */
+}
+
+/* Styling for the left side of the navbar */
+.left span {
+    font-size: 1.5rem; /* Increases font size for better visibility */
+    color: white; /* Makes text color white for contrast */
+    font-weight: bold; /* Adds boldness to the text */
+}
+
+/* Styling for the right side of the navbar */
+.right a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+.right span {
+    margin-right: 3vw;
+    font-size: 1rem; /* Sets font size for links */
+    color: white; /* Sets text color to white */
+    padding: 0.9vh 2vw; /* Adds padding for clickable area */
+    border: 2px solid white; /* Adds a border to the link */
+    border-radius: 4px; /* Rounds the corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 25px;
+}
+
+/* Hover effect for the upload button */
+.right span:hover {
+    background-color: white; /* Changes background color on hover */
+    color: black; /* Changes text color on hover */
+}

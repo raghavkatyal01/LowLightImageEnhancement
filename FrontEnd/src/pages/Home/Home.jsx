@@ -1,17 +1,27 @@
+// Home.js
 import React from 'react';
 import './Home.css';
 
 function Home() {
   return (
     <>
+
       <div className="mainpage">
         <div className="page1">
-
+          <span>Welcome to GeekPie</span>
         </div>
-        <div className="page2">Page 2</div>
-        <div className="page3">Page 3</div>
-        <div className="page4">Page 4</div>
-        <div className="page5">Page 5</div>
+        <div className="page2">
+          <span>Page 2</span>
+        </div>
+        <div className="page3">
+          <span>Page 3</span>
+        </div>
+        <div className="page4">
+          <span>Page 4</span>
+        </div>
+        <div className="page5">
+          <span>Page 5</span>
+        </div>
       </div>
     </>
   );
