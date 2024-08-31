@@ -131,7 +131,7 @@ class ProcessImageView(APIView):
             # Use the model to make a prediction on the preprocessed image
             prediction = loaded_model(test_image, training=False)  # Explicitly set training=False if needed
 
-            image = makeImage(prediction=prediction)
+            image = makeImage(prediction)
             
 
             # Return the processed image as an HTTP response
