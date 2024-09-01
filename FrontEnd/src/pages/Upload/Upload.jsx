@@ -24,8 +24,9 @@ function Upload() {
   };
 
   const handleUploadImage = async () => {
+  
     if (!selectedImage) return;
-
+    setSplit(true)
     setLoading(true);
     setError(null);
 
@@ -98,13 +99,13 @@ function Upload() {
           <HiArrowNarrowLeft color="white" className="text-3xl text-gray-600 hover:text-indigo-600 transition-colors duration-200" />
         </Link>
 
-        {loading && (
+        {/* {loading && (
           <div className="flex flex-row border-2 border-gray-300 rounded-lg shadow-lg overflow-hidden max-w-5xl w-full h-96">
             <div className="w-full flex items-center justify-center">
               <FaSpinner className="animate-spin text-gray-600 text-5xl" />
             </div>
           </div>
-        )}
+        )} */}
 
         {split ? (
           <div className="flex flex-col items-center max-w-5xl w-full">
@@ -119,15 +120,15 @@ function Upload() {
                 )}
               </div>
               <div className="w-1/2 bg-gray-100 flex items-center justify-center">
-                {processedImage ? (
+                {loading?(<div className="w-full flex items-center justify-center">
+              <FaSpinner className="animate-spin text-gray-600 text-5xl" />
+            </div>):(processedImage && 
                   <img
                     src={processedImage}
                     alt="Processed Preview"
                     className="w-full h-full object-cover"
                   />
-                ) : (
-                  <p className="text-gray-500">No processed image available</p>
-                )}
+                )  }
               </div>
             </div>
             <div className="mt-4 flex gap-4">
