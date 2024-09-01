@@ -16,7 +16,9 @@ function App() {
           <Route path="/upload" element={<Upload />}></Route>
           <Route path = "/" element={<Try/>}></Route>
         </Routes>
-        {/* <Footer/> */}
+        {/* <div className="">
+          <Footer />
+        </div> */}
       </Router>
     </>
   )

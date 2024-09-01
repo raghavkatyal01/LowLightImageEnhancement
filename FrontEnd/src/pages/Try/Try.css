@@ -1,126 +1,154 @@
-/* Existing styles */
-
 .main {
-    position: relative;
-    overflow: hidden; /* Ensure overflow is hidden to avoid scrollbars */
-  }
-  
-  .page_1 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* Hide overflow to prevent scrollbars from the animation */
-  }
-  
-  .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Stars will be in the background */
-  }
-  
-  .stars img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .cloud {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; /* Double width for seamless animation */
-    height: 100%;
-    z-index: 2; /* Clouds will be on top of stars */
-    display: flex; /* Use flex to align the images horizontally */
-    animation: moveClouds 20s linear infinite; /* Infinite animation */
-  }
-  
-  .cloud img {
-    width: 50%; /* Adjust this if needed, it should be half of the container width */
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .moon {
-    position: fixed; /* Fixed positioning to always be at the bottom of the viewport */
-    bottom: 0; /* Start from the bottom of the screen */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50vw; /* Initial size */
-    z-index: 3; /* Above stars and clouds */
-    transition: width 0.3s ease; /* Smooth transition for width change */
-  }
-  
-  .moon img {
-    width: 100%;
-    height: auto;
-  }
+  position: relative;
+  overflow: hidden;
+}
 
-  .heading{
-    text-shadow: 50px 50px 50px black;
-    /* text-shadow:30cqmax; */
+.page_1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.stars img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  animation: moveClouds 20s linear infinite;
+}
+
+.cloud img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moon {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  z-index: 3;
+  transition: width 0.3s ease;
+}
+
+.moon img {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  text-shadow: 50px 50px 50px black;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40vw;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 50px rgb(4, 0, 0);
+  color: white;
+  text-align: center;
+  z-index: 5;
+  font-size: xx-large;
+}
+
+.page_2 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.stars1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.stars1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animation for clouds */
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* New styles for text-container */
-  .text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40vw;
-    transform: translate(-50%, -50%);
-    text-shadow: 0px 0px 50px rgb(4, 0, 0); 
-    color: white;
-    text-align: center; 
-    z-index: 5; 
-    font-size: xx-large;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .page_2 {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden; /* Hide overflow to prevent scrollbars from the animation */
-    }
-    
-    /* .stars1 {
-        position: absolute; */
-        /* top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1; 
-    }
-    
-    .stars1 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    } */
-    
-    /* Animation for clouds */
-    @keyframes moveClouds {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  /* Additional button styles */
-  .moon-button {
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    outline: none;
-    z-index: 4; /* Ensure button is clickable */
-    transition: transform 0.3s ease;
-  }
-  
-  .moon-button img {
-    pointer-events: none; /* Prevent interaction with the image itself */
-  }
-  
+}
+
+/* Additional button styles */
+.moon-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  z-index: 4;
+  transition: transform 0.3s ease;
+}
+
+.moon-button img {
+  pointer-events: none;
+}
+
+/* Sliding from left */
+.slide-left {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translateY(-50%);
+  transition: left 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  z-index: 2;
+}
+
+.slide-left.slide-in {
+  left: 10%;
+  opacity: 1;
+}
+
+/* Sliding from right */
+.slide-right {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  transition: right 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  z-index: 2;
+}
+
+.slide-right.slide-in {
+  right: 10%;
+  opacity: 1;
+}
