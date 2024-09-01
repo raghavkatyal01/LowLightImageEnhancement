@@ -254,7 +254,9 @@ zero_dce_model = ZeroDCE()
 zero_dce_model.compile(learning_rate=1e-4)
 
 # Load the weights from the file
-zero_dce_model.load_weights("C:/Users/kesha/OneDrive/Desktop/LowLightImageEnhancement/BackEnd/server/api/zero_dce_model_weights.h5")
+# zero_dce_model.load_weights("C:/Users/theni/Desktop/LowLightImageEnhancement/BackEnd/server/api/zero_dce_model_weights.h5")
+zero_dce_model.load_weights(os.path.join(os.getcwd() ,"api/zero_dce_model_weights.h5"))
+
 
 
 
@@ -367,7 +369,9 @@ class ProcessImageView(APIView):
 
         try:
             # Define the path where the image will be saved
-            save_path = "C:/Users/kesha/OneDrive/Desktop/LowLightImageEnhancement/BackEnd/server/api/uploads/"
+            # save_path = "C:/Users/theni/Desktop/LowLightImageEnhancement/BackEnd/server/api/uploads"
+            save_path = os.path.join(os.getcwd(), "api/uploads")
+
             img_path = os.path.join(save_path, image_file.name)
             
             # Save the uploaded image
