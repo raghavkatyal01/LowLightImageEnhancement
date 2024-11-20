@@ -130,7 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "https://yourfrontenddomain.com",  # Replace with your frontend domain
     "http://localhost:5173",
-    "image-enhancer-bhit.onrender.com",
+    "https://image-enhancer-bhit.onrender.com",
     'http://localhost:3000',# For local development
 ]
 CORS_ALLOW_ALL_ORIGINS = True
