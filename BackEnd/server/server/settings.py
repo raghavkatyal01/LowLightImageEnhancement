@@ -53,9 +53,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'server.urls'
 
@@ -132,7 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "https://yourfrontenddomain.com",  # Replace with your frontend domain
-    "http://localhost:5173",  # For local development
+    "http://localhost:5173",
+    'http://localhost:3000',# For local development
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # If you need to allow cookies or authentication
